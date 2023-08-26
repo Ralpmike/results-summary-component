@@ -1,0 +1,188 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  border: none;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Hanken Grotesk';
+}
+
+:root {
+
+  --Light-red: hsl(0, 100%, 67%);
+  --Orangey-yellow: hsl(39, 100%, 56%);
+  --Green-teal: hsl(166, 100%, 37%);
+  --Cobalt-blue: hsl(234, 85%, 45%);
+  /* gradient colors */
+  --slate-blue: hsl(252, 100%, 67%);
+  --Light-royal: hsl(241, 81%, 54%);
+  --Violet-blue: hsla(256, 72%, 46%, 1);
+  --Persian-blue: hsla(241, 72%, 46%, 0);
+  /* neutral colors */
+  --White: hsl(0, 0%, 100%);
+  --Pale-blue: hsl(221, 100%, 96%);
+  --Light-lavender: hsl(241, 100%, 89%);
+  --gray-blue: hsl(224, 30%, 27%);
+}
+
+body {
+  padding: 1.25rem;
+}
+.container {
+  box-shadow: 5px 10px 20px  hsla(241, 100%, 89%, .2);
+  border-radius: 0 0 20px 20px;
+
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.flex-default {
+  display: flex;
+}
+.card1 {
+  background: linear-gradient(to bottom, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+  border-radius: 20px;
+  text-align: center;
+  padding: 40px;
+  width: 100%;
+}
+
+.card1 p {
+  font-size: 20px;
+  color: var(--Light-lavender);
+}
+
+.circle {
+  border-radius: 50%;
+  background: linear-gradient(to bottom, hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+  width: 170px;
+  aspect-ratio: 1/1;
+}
+
+h1 {
+  margin-top: 40px;
+  font-size: 64px;
+  color: var(--White);
+}
+
+.circle span {
+  margin-top: -10px;
+  font-size: .875rem;
+  display: block;
+  color: var(--Light-lavender);
+}
+
+.score {
+  gap: 10px;
+}
+h2 {
+  color: var(--White);
+}
+.score p {
+  font-size: 16px;
+}
+
+.card2 {
+  margin-top: -10px;
+  align-items: unset;
+  padding: 20px;
+  width: 100%;
+}
+.card2 h2 {
+  color: var(--gray-blue);
+}
+
+.component-styles{
+  background: hsla(0, 100%, 67%, .1);
+  border-radius: 10px;
+  padding: 25px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon {
+  justify-content: center;
+  gap: 15px;
+}
+.card-reaction h3 {
+  color: var(--Light-red);
+}
+
+.component-styles p {
+  color: var(--gray-blue);
+  font-weight: 700;
+}
+.component-styles span {
+  color: var(--Light-lavender);
+}
+
+.card-memory {
+  background: hsla(39, 100%, 56%, .1);
+}
+.card-memory h3 {
+  color: var(--Orangey-yellow);
+}
+
+.card-verbal {
+  background: hsla(166, 100%, 37%, .1);
+}
+.card-verbal h3 {
+  color: var(--Green-teal);
+}
+
+.card-visual {
+  background: hsla(234, 85%, 45%, .1);
+}
+.card-visual h3 {
+  color: var(--Cobalt-blue);
+}
+
+button {
+  padding: 20px;
+  background: var(--gray-blue);
+  color: white;
+  font-size: 1rem;
+  border-radius: 30px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all .125s;
+}
+button:hover {
+  background: linear-gradient(to bottom, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+}
+button:active {
+  opacity: .8;
+}
+@media only screen and (min-width: 600px) {
+  .container {
+    display: flex;
+    justify-content: center;
+    width: 620px;
+    height: 460px;
+    margin: 100px auto;
+    gap: unset;
+    border-radius: 0 20px 20px 0;
+
+  }
+  .component-styles {
+    padding: 12px;
+  }
+  .card1 {
+    gap: 40px;
+  }
+  .card2 {
+    padding: 30px;
+    max-width: 400px;
+    margin-top: unset;
+  }
+  button {
+    margin-top: 10px;
+    padding: 15px;
+  }
+}
